@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Night colors -->
+    <!-- Docs: https://material.io/design/color/dark-theme.html -->
+    <color name="colorPrimary">@color/grey_50</color>
+    <color name="colorPrimaryDark">@color/grey_light</color>
+    <color name="colorAccent">@color/red_pure</color>
+    <color name="window_background">@color/black</color>
+    <color name="text_primary">@color/white_high_emphasis</color>
+    <color name="text_snackbar">#121212</color>
+    <color name="text_button">@color/red_pure</color>
+    <color name="icon">@color/white_high_emphasis</color>
+    <color name="logo_title">@color/white_high_emphasis</color>
+    <color name="logo_lock">@color/grey_50</color>
+    <color name="logo_shield">@color/red_pure</color>
+    <color name="dropdown_background">#1F1F1F</color>
+    <color name="box_stroke">#2F2F2F</color>
+    <color name="black">#121212</color> <!--Dark grey-->
+    <color name="text_snackbar_action">@color/red_pure</color>
+    <color name="highlight">#5affffff</color>
+</resources>

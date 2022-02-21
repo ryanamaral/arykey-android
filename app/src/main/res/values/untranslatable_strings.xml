@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="transition_name" translatable="false">sheetTransition</string>
+    <string name="line_feed_code_cr" translatable="false">CR</string>
+    <string name="line_feed_code_lf" translatable="false">LF</string>
+    <string name="line_feed_code_cr_lf" translatable="false">CR+LF</string>
+    <string name="line_feed_code_cr_value" translatable="false">cr</string>
+    <string name="line_feed_code_lf_value" translatable="false">lf</string>
+    <string name="line_feed_code_cr_lf_value" translatable="false">cr_lf</string>
+</resources>

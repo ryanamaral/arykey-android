@@ -1,0 +1,15 @@
+{
+  "data" :[
+    {"package_name": "com.android.contacts", "label" : "Contacts"},
+    {"package_name": "com.android.calendar", "label" : "Calendar"},
+    {"package_name": "com.android.documentsui", "label" : "Documents"},
+    {"package_name": "com.android.fmradio", "label" : "FM Radio"},
+    {"package_name": "com.android.messaging", "label" : "Messaging"},
+    {"package_name": "com.android.terminal", "label" : "Terminal"},
+    {"package_name": "com.android.providers.downloads.ui", "label" : "Downloads"},
+    {"package_name": "com.android.vending", "label" : "Google Play Store"},
+    {"package_name": "com.android.webview", "label" : "Android System WebView"},
+    {"package_name": "com.android.stk", "label" : "SIM Toolkit"},
+    {"package_name": "com.android.providers.telephony", "label" : "Phone and Messaging Storage"}
+  ]
+}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomSheetRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@drawable/shape_bg_bottom_sheet_dialog"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:behavior_skipCollapsed="true"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    android:transitionName="@string/transition_name">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="19dp"
+                android:contentDescription="@string/app_logo_content_description"
+                android:gravity="center_vertical"
+                android:src="@drawable/ic_logo" />
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/imageViewLogo"
+                android:fontFamily="@font/sans_semi_bold"
+                android:gravity="center_vertical"
+                android:paddingBottom="2dp"
+                android:text="@string/app_name"
+                android:textColor="@color/logo_title"
+                android:textSize="26sp"
+                tools:ignore="RelativeOverlap" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonSkip"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="21dp"
+                android:enabled="true"
+                android:fontFamily="@font/sans_light"
+                android:paddingBottom="8dp"
+                android:paddingEnd="0dp"
+                android:paddingStart="0dp"
+                android:paddingTop="8dp"
+                android:text="@string/skip"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+                android:textSize="18sp"
+                app:cornerRadius="32dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/sans_light"
+            android:gravity="center_horizontal"
+            android:paddingBottom="2dp"
+            android:text="@string/connect_your_device"
+            android:textColor="@color/text_primary"
+            android:textSize="26sp" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="0dp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="lottie_usb_stick.json"
+            app:lottie_loop="true"
+            app:lottie_scale="1"
+            app:lottie_speed="1" />
+    </LinearLayout>
+</FrameLayout>

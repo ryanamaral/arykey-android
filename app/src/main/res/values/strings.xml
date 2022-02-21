@@ -1,0 +1,38 @@
+<resources>
+    <!-- App name-->
+    <string name="app_name">AryKey</string>
+    <!-- Accessibility service -->
+    <string name="accessibility_service_permission">AryKey: Auto-Detect App</string>
+    <string name="accessibility_service_permission_desc">
+        Turning this on allows the automatic detection of
+        the current/last app in foreground that you might want to unlock.
+        \n\nAdvantage: No need to choose the app you want to unlock from the list of installed apps.
+    </string>
+    <!-- Snacks -->
+    <string name="snack_disconnected">USB Disconnected</string>
+    <string name="snack_disconnected_action">Ignore</string>
+    <string name="snack_accessibility">Enable Auto-Detect App</string>
+    <string name="snack_accessibility_action">Settings</string>
+    <string name="snack_permissions">Permission to Auto-Fill User</string>
+    <string name="snack_permissions_action">OK</string>
+    <!-- Notification -->
+    <string name="notification_title">@string/app_name</string>
+    <string name="notification_channel_title">@string/app_name</string>
+    <string name="notification_action_launch">Open</string>
+    <string name="notification_action_stop">Close</string>
+    <!-- more -->
+    <string name="button_cancel">Cancel</string>
+    <string name="button_unlock">Unlock</string>
+    <string name="app_logo_content_description">App logo</string>
+    <string name="skip">Skip</string>
+    <string name="connect_your_device">Connect your device</string>
+    <string name="user_id_hint">User ID</string>
+    <string name="edittext_app_hint">App</string>
+    <string name="choose_app">Choose app to login</string>
+    <string name="fill_in_username">Fill in your login username</string>
+    <string name="app_is_minimised">The app is currently minimised in the recent task list.\n</string>
+    <string name="usb_permission_granted">The USB permission was Granted.</string>
+    <string name="usb_permission_not_granted">The USB permission was Not Granted yet.</string>
+    <string name="usb_device_attached">The USB device was Attached.</string>
+    <string name="usb_device_detached">The USB device was Detached.</string>
+</resources>

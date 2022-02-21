@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomSheetRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:background="@drawable/shape_bg_bottom_sheet_dialog"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:behavior_skipCollapsed="true"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    android:transitionName="@string/transition_name">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/contentLayout"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="0dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:clipToPadding="false"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_marginTop="42dp"
+                        android:layout_width="86dp"
+                        android:layout_height="86dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_logo_content_description"
+                        android:src="@drawable/ic_logo"/>
+
+                    <com.mukesh.OtpView
+                        android:id="@+id/otp_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="36dp"
+                        android:inputType="numberPassword"
+                        android:itemBackground="@color/whitish"
+                        android:textColor="@color/text_pin"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:cursorVisible="false"
+                        android:focusableInTouchMode="false"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:OtpHideLineWhenFilled="true"
+                        app:OtpItemCount="6"
+                        app:OtpItemSpacing="8dp"
+                        app:OtpItemWidth="40dp"
+                        app:OtpItemHeight="62dp"
+                        app:OtpLineColor="@color/pin_line"
+                        app:OtpLineWidth="4dp"
+                        app:OtpViewType="line"
+                        tools:text="123"/>
+
+                    <com.davidmiguel.numberkeyboard.NumberKeyboard
+                        android:id="@+id/numberKeyboard"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:paddingTop="32dp"
+                        android:paddingBottom="36dp"
+                        android:paddingStart="28dp"
+                        android:paddingEnd="28dp"
+                        android:fontFamily="@font/sans_light"
+                        app:numberkeyboard_numberKeyBackground="?attr/selectableItemBackgroundBorderless"
+                        app:numberkeyboard_numberKeyTextColor="@color/text_primary"
+                        app:numberkeyboard_rightAuxBtnIcon="@drawable/ic_backspace"
+                        app:numberkeyboard_rightAuxBtnBackground="?attr/selectableItemBackgroundBorderless"
+                        app:numberkeyboard_keyPadding="14dp"
+                        app:numberkeyboard_keyboardType="custom"/>
+                </LinearLayout>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieAnimationView"
+                    android:layout_width="350dp"
+                    android:layout_height="350dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="32dp"
+                    android:padding="32dp"
+                    android:visibility="gone"
+                    app:lottie_autoPlay="false"
+                    app:lottie_fileName="lottie_loading_success_error.json"
+                    app:lottie_loop="false"
+                    app:lottie_scale="1"
+                    app:lottie_speed="1"/>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!--// Top -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="8dp"
+            app:elevation="0dp">
+<!--            android:theme="@style/MenuItemRippleDark"-->
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@null"
+                app:navigationIcon="@drawable/ic_arrow_left"/>
+        </com.google.android.material.appbar.AppBarLayout>
+    </RelativeLayout>
+</FrameLayout>

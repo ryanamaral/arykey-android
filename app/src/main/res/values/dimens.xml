@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="box_stroke_width">1dp</dimen>
+    <dimen name="box_stroke_focused">2dp</dimen>
+    <dimen name="bottom_sheet_corner_radius">16dp</dimen>
+    <dimen name="cpv_radius_initial_default">50dp</dimen>
+    <integer name="cpv_ripple_count_default">3</integer>
+    <dimen name="pulse_radius">5dp</dimen>
+    <dimen name="pulse_margin">0dp</dimen>
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+
+    <declare-styleable name="CircularPulseView">
+        <attr name="circlePulseViewStyle" format="reference" />
+        <attr name="cpv_count" format="integer" />
+        <attr name="cpv_color" format="color" />
+        <attr name="cpv_radius_initial" format="dimension" />
+    </declare-styleable>
+
+</resources>

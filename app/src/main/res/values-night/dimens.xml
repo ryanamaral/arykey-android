@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Night dimens -->
+    <dimen name="box_stroke_width">0.5dp</dimen>
+    <dimen name="box_stroke_focused">1dp</dimen>
+</resources>

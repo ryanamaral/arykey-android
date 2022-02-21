@@ -1,0 +1,43 @@
+<resources>
+
+    <!--///////////-->
+    <!-- App Theme -->
+    <!--///////////-->
+    <eat-comment />
+
+    <style name="Theme.App" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/grey</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorControlHighlight">@color/highlight</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.App.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <!-- Style to use for BottomSheets in this theme -->
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <!-- Style to use for Snackbars in this theme -->
+        <item name="snackbarStyle">@style/Widget.App.Snackbar</item>
+        <!-- Style to use for action button within a Snackbar in this theme -->
+        <item name="snackbarButtonStyle">@style/Widget.App.Button.TextButton.Snackbar</item>
+        <!-- Style to use for message text within a Snackbar in this theme -->
+        <item name="snackbarTextViewStyle">@style/Widget.App.Snackbar.TextView</item>
+    </style>
+
+    <style name="Theme.App.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.App.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

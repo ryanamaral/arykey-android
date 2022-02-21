@@ -1,0 +1,131 @@
+<resources>
+
+    <!--//////////////-->
+    <!-- Bottom Sheet -->
+    <!--//////////////-->
+    <eat-comment />
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:layout_marginStart">9dp</item>
+        <item name="android:layout_marginEnd">9dp</item>
+        <item name="android:elevation">12dp</item>
+        <item name="android:background">@drawable/shape_bg_bottom_sheet_dialog</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:navigationBarColor">#10000000</item>
+        <item name="android:colorBackground">@color/transparent</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:backgroundDimAmount">0.2</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <!--//////////-->
+    <!-- Snackbar -->
+    <!--//////////-->
+    <eat-comment />
+
+    <style name="Widget.App.Snackbar" parent="Widget.MaterialComponents.Snackbar">
+        <item name="android:layout_margin">@null</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:background">@drawable/shape_snackbar_background</item>
+    </style>
+
+    <style name="Widget.App.Snackbar.TextView" parent="@style/Widget.MaterialComponents.Snackbar.TextView">
+        <item name="android:textColor">@color/text_snackbar</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/sans_regular</item>
+    </style>
+
+    <style name="Widget.App.Button.TextButton.Snackbar" parent="@style/Widget.MaterialComponents.Button.TextButton.Snackbar">
+        <item name="android:textColor">@color/text_snackbar_action</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/sans_semi_bold</item>
+    </style>
+
+    <!-- ////// -->
+    <!-- Button -->
+    <!-- ////// -->
+    <eat-comment />
+
+    <style name="Default.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:paddingTop">13dp</item>
+        <item name="android:paddingBottom">13dp</item>
+        <item name="android:paddingStart">26dp</item>
+        <item name="android:paddingEnd">26dp</item>
+        <item name="android:elevation">0dp</item>
+        <item name="cornerRadius">32dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/sans_regular</item>
+    </style>
+
+    <style name="Unlock.Button.Unelevated" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:paddingTop">13dp</item>
+        <item name="android:paddingBottom">13dp</item>
+        <item name="android:paddingStart">26dp</item>
+        <item name="android:paddingEnd">26dp</item>
+        <item name="cornerRadius">32dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/sans_regular</item>
+        <item name="icon">@drawable/ic_logo_simple</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconTint">@color/white</item>
+        <item name="backgroundTint">@color/red_pure</item> <!-- force this color on dark theme -->
+    </style>
+
+    <!-- ///////// -->
+    <!-- TextInput -->
+    <!-- ///////// -->
+    <eat-comment />
+
+    <style name="TextInputLayoutDropdownDefaultStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:fontFamily">@font/sans_regular</item>
+        <item name="android:textAppearance">@style/ItemTextAppearance</item>
+        <item name="hintTextAppearance">@style/AppTheme.TextFloatLabelAppearance</item>
+        <item name="errorTextAppearance">@style/AppTheme.TextErrorAppearance</item>
+        <item name="boxStrokeWidth">@dimen/box_stroke_width</item>
+        <item name="boxStrokeWidthFocused">@dimen/box_stroke_focused</item>
+        <item name="boxStrokeColor">@color/box_stroke</item>
+        <item name="hintAnimationEnabled">true</item>
+        <item name="boxCornerRadiusBottomEnd">16dp</item>
+        <item name="boxCornerRadiusTopEnd">16dp</item>
+        <item name="boxCornerRadiusBottomStart">16dp</item>
+        <item name="boxCornerRadiusTopStart">16dp</item>
+        <item name="endIconTint">@color/selector_end_icon_edittext</item>
+        <item name="endIconDrawable">@drawable/selector_dropdown_end</item>
+    </style>
+
+    <style name="ItemTextAppearance">
+        <item name="android:completionThreshold">1</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:drawableStart">@drawable/ic_transparent</item>
+        <item name="android:background">@null</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/sans_light</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:dropDownSelector">@drawable/shape_dropdown_background</item>
+        <!--FIXME: https://itnext.io/styling-material-exposed-dropdown-menus-on-android-19c7d21a9fcc-->
+    </style>
+
+    <style name="AppTheme.TextFloatLabelAppearance" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/sans_regular</item>
+    </style>
+
+    <style name="AppTheme.TextErrorAppearance" parent="TextAppearance.Design.Error">
+        <item name="android:textColor">@color/red_700</item>
+        <item name="android:fontFamily">@font/sans_regular</item>
+    </style>
+
+</resources>
