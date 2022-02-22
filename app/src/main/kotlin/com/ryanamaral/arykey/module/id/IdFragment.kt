@@ -24,6 +24,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import coil.ImageLoader
 import com.google.android.material.snackbar.BaseTransientBottomBar
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
 import com.ryanamaral.arykey.R
 import com.ryanamaral.arykey.databinding.FragmentIdBinding
@@ -40,7 +41,8 @@ import com.ryanamaral.arykey.module.apps.model.AppItem
 import com.ryanamaral.arykey.module.apps.viewmodel.AppsViewModel
 import com.ryanamaral.arykey.module.root.withRootBottomSheet
 import com.ryanamaral.arykey.common.domain.Result
-import com.ryanamaral.arykey.common.extension.buildSnackbar
+import com.ryanamaral.arykey.common.view.addDismissListener
+import com.ryanamaral.arykey.common.view.removeBottomPadding
 import com.ryanamaral.arykey.common.extension.setKeyboardCloseAndClearFocus
 import com.ryanamaral.arykey.common.flow.onClick
 import com.ryanamaral.arykey.common.flow.throttleFirst
@@ -425,45 +427,57 @@ class IdFragment : Fragment() {
     }
 
     private fun showSnackbarAboutUsbDisconnected() {
-        buildSnackbar(
-            view = binding.bottomSheetRoot,
-            messageStringResId = R.string.snack_disconnected,
-            actionStringResId = R.string.snack_disconnected_action
-        ) { event ->
-            when (event) {
-                BaseTransientBottomBar.BaseCallback.DISMISS_EVENT_ACTION -> {
-                    handleUnlockClick()
+        Snackbar.make(
+            binding.bottomSheetRoot,
+            getString(R.string.snack_disconnected),
+            Snackbar.LENGTH_INDEFINITE
+        ).apply {
+            removeBottomPadding()
+            setAction(R.string.snack_disconnected_action) { dismiss() }
+            addDismissListener(onDismissed = { event ->
+                when (event) {
+                    BaseTransientBottomBar.BaseCallback.DISMISS_EVENT_ACTION -> {
+                        handleUnlockClick()
+                    }
+                    BaseTransientBottomBar.BaseCallback.DISMISS_EVENT_SWIPE -> {
+                        this@IdFragment.withRootBottomSheet { goBack() }
+                    }
+                    else -> {} // do nothing
                 }
-                BaseTransientBottomBar.BaseCallback.DISMISS_EVENT_SWIPE -> {
-                    this@IdFragment.withRootBottomSheet { goBack() }
-                }
-                else -> {} // do nothing
-            }
+            })
         }.show()
     }
 
     private fun showSnackbarAccessibility() {
-        buildSnackbar(
-            view = binding.bottomSheetRoot,
-            messageStringResId = R.string.snack_accessibility,
-            actionStringResId = R.string.snack_accessibility_action
-        ) { event ->
-            if (event == BaseTransientBottomBar.BaseCallback.DISMISS_EVENT_ACTION) {
-                // open Accessibility Settings
-                startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
-            }
+        Snackbar.make(
+            binding.bottomSheetRoot,
+            getString(R.string.snack_accessibility),
+            Snackbar.LENGTH_INDEFINITE
+        ).apply {
+            removeBottomPadding()
+            setAction(R.string.snack_accessibility_action) { dismiss() }
+            addDismissListener(onDismissed = { event ->
+                if (event == BaseTransientBottomBar.BaseCallback.DISMISS_EVENT_ACTION) {
+                    // open Accessibility Settings
+                    startActivity(Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS))
+                }
+            })
         }.show()
     }
 
     private fun showSnackbarPermissionRationale() {
-        buildSnackbar(
-            view = binding.bottomSheetRoot,
-            messageStringResId = R.string.snack_permissions,
-            actionStringResId = R.string.snack_permissions_action
-        ) { event ->
-            if (event == BaseTransientBottomBar.BaseCallback.DISMISS_EVENT_ACTION) {
-                requestPermissions()
-            }
+        Snackbar.make(
+            binding.bottomSheetRoot,
+            getString(R.string.snack_permissions),
+            Snackbar.LENGTH_INDEFINITE
+        ).apply {
+            removeBottomPadding()
+            setAction(R.string.snack_permissions_action) { dismiss() }
+            addDismissListener(onDismissed = { event ->
+                if (event == BaseTransientBottomBar.BaseCallback.DISMISS_EVENT_ACTION) {
+                    requestPermissions()
+                }
+            })
         }.show()
     }
 
