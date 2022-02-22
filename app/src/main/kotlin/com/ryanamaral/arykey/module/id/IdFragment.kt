@@ -43,7 +43,7 @@ import com.ryanamaral.arykey.module.root.withRootBottomSheet
 import com.ryanamaral.arykey.common.domain.Result
 import com.ryanamaral.arykey.common.view.addDismissListener
 import com.ryanamaral.arykey.common.view.removeBottomPadding
-import com.ryanamaral.arykey.common.extension.setKeyboardCloseAndClearFocus
+import com.ryanamaral.arykey.common.view.setKeyboardCloseAndClearFocus
 import com.ryanamaral.arykey.common.flow.onClick
 import com.ryanamaral.arykey.common.flow.throttleFirst
 import com.ryanamaral.arykey.module.packagename.data.PackageRepository

@@ -1,4 +1,4 @@
-package com.ryanamaral.arykey.common.extension
+package com.ryanamaral.arykey.common.view
 
 import android.app.Activity
 import android.content.Context

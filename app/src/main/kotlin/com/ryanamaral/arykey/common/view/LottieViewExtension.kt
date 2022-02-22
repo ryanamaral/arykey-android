@@ -1,4 +1,4 @@
-package com.ryanamaral.arykey.common.extension
+package com.ryanamaral.arykey.common.view
 
 import android.animation.Animator
 import com.airbnb.lottie.LottieAnimationView

@@ -15,7 +15,7 @@ import com.ryanamaral.arykey.databinding.FragmentAuthBinding
 import com.ryanamaral.arykey.di.IoDispatcher
 import com.ryanamaral.arykey.module.root.withRootBottomSheet
 import com.ryanamaral.arykey.common.domain.Result
-import com.ryanamaral.arykey.common.extension.addAnimationListener
+import com.ryanamaral.arykey.common.view.addAnimationListener
 import com.ryanamaral.arykey.module.id.IdItem
 import com.ryanamaral.arykey.module.usb.UsbRepository
 import com.ryanamaral.arykey.module.usb.UsbWriteResult
