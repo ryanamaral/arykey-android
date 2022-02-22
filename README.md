@@ -95,12 +95,12 @@ That means any entered PIN will work, so that we can eliminate another possible 
 
 ### Known Bugs
 
-* Padding bottom of the Snackbar is incorrect (this was working but I broke it somehow =/)
-* Dropdown popup background of the `App` input is broken. Style with rounded corners not being
+- [ ] Dropdown popup background of the `App` input is broken. Style with rounded corners not being
   applied and some overlay is occurring.
-* Dropdown popup of the `User ID` input have the wrong anchor the first time and its conflicting
+- [ ] Dropdown popup of the `User ID` input have the wrong anchor the first time and its conflicting
   with the keyboard events.
-  
+- [x] ~~Padding bottom of the Snackbar is incorrect~~
+
 Note: Some view & layouts are not fully optimised because they will be discarded soon when migrating to compose UI
 
 
