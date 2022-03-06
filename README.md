@@ -1,6 +1,19 @@
-![app-icon](app/src/main/res/mipmap-xxxhdpi/ic_launcher.png)
+# <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="45" align="left"> AryKey Android
+<br />
 
-# AryKey \[ 🚧🧑‍🏭 Work in progress 🔧🚧 \]
+[link-android]: https://github.com/ryanamaral/arykey-android 'Version published on Github'
+[link-chrome]: https://github.com/ryanamaral/arykey-chrome-extension 'Version published on Github'
+[link-firmware]: https://github.com/ryanamaral/arykey-firmware 'Version published on Github'
+
+[<img src="https://raw.githubusercontent.com/ryanamaral/arykey-firmware/dev/assets/android.png" width="34" alt="Android" valign="middle">][link-android] <b>Android App</b> [<img valign="middle" src="https://img.shields.io/badge/v2022.02.21.1-dev-blue">][link-android]
+
+[<img src="https://raw.githubusercontent.com/alrra/browser-logos/90fdf03c/src/chrome/chrome.svg" width="34" alt="Chrome" valign="middle">][link-chrome]  <b>Chrome Extension</b> [<img valign="middle" src="https://img.shields.io/badge/v2022.2.28.1-dev-blue">][link-chrome]
+
+[<img src="https://raw.githubusercontent.com/ryanamaral/arykey-firmware/dev/assets/firmware.png" width="34" alt="Android" valign="middle">][link-firmware] <b>Firmware</b> [<img valign="middle" src="https://img.shields.io/badge/v2022.03.06.1-dev-blue">][link-firmware]
+
+<br />
+
+## 👀 Overview
 
 Android application that prepares an hardware device via USB serial port with a specific password
 generated deterministically based on three (3) inputs:
@@ -16,7 +29,7 @@ The password is not transmitted back via USB to eliminate a possible attack vect
 by emulating an external keyboard when the user clicks the physical button on the device.
 
 
-### Architecture
+### 🖼 Architecture
 
 * [MVVM](https://developer.android.com/jetpack/guide)
 * [Kotlin](https://kotlinlang.org/)
@@ -24,7 +37,7 @@ by emulating an external keyboard when the user clicks the physical button on th
 * [Flow](https://kotlinlang.org/docs/flow.html)
 
 
-### How to use during Dev
+## 🌙🔧 How to use during Dev
 
 1. Install & launch the *AryKey app*
 2. Plug in hardware device into the USB port of the phone (OR) Skip the connect screen if you don't
@@ -46,7 +59,7 @@ by emulating an external keyboard when the user clicks the physical button on th
 That means any entered PIN will work, so that we can eliminate another possible vector of attack.
 
 
-### How to use everyday
+## ☀️🔧 How to use everyday
 
 1. Assuming you are in the login screen of a random app, _Linkedin_ app for example, just plug in
    the device into the USB port and the **AryKey app** will open automatically with the _Linkedin_
@@ -57,7 +70,7 @@ That means any entered PIN will work, so that we can eliminate another possible 
 4. Type your 6 digits `PIN`
 5. Done! _(preparing the device)_
 
-### Features
+## 🏗️ Features
 
 - [x] UX concept solely with bottom sheets
 - [x] Auto launch the app when the hardware device (Raspberry Pi Pico) is plugged in
@@ -77,7 +90,7 @@ That means any entered PIN will work, so that we can eliminate another possible 
 - [x] Dark-Theme support
 
 
-### TODO
+#### TODO
 
 - [ ] Navigate to right fragment when hardware device is plugged in
 - [ ] Replace hardcoded success event
@@ -93,7 +106,7 @@ That means any entered PIN will work, so that we can eliminate another possible 
 - [ ] More TBD
 
 
-### Known Bugs
+## 🐞 Known Bugs
 
 - [ ] Dropdown popup background of the `App` input is broken. Style with rounded corners not being
   applied and some overlay is occurring.
@@ -101,9 +114,14 @@ That means any entered PIN will work, so that we can eliminate another possible 
   with the keyboard events.
 - [x] ~~Padding bottom of the Snackbar is incorrect~~
 
-Note: Some view & layouts are not fully optimised because they will be discarded soon when migrating to compose UI
+> Note: Some view & layouts are not fully optimised because they will be discarded soon when migrating to compose UI
 
 
-### Screenshots
+## 📸 Screenshots
 
 <img src="https://github.com/ryanamaral/arykey-android/raw/dev/screenshots/main.png" width="260"> <img src="https://github.com/ryanamaral/arykey-android/raw/dev/screenshots/id.png" width="260"> <img src="https://github.com/ryanamaral/arykey-android/raw/dev/screenshots/auth.png" width="260">
+
+
+## 📄 License
+
+> //TODO
